@@ -20,7 +20,7 @@ docker build -t r-voxelmap_noetic .
 ## Step 3 (run docker, file 'reg-1.bag' should be in '~/hdmapping-benchmark/data')
 ```shell
 cd ~/hdmapping-benchmark/benchmark-R-VoxelMap-to-HDMapping
-chmod +x docker_session_run-ros1-fast-lio.sh 
+chmod +x docker_session_run-ros1-r-voxelmap.sh 
 cd ~/hdmapping-benchmark/data
 ~/hdmapping-benchmark/benchmark-R-VoxelMap-to-HDMapping/docker_session_run-ros1-r-voxelmap.sh reg-1.bag .
 ```
