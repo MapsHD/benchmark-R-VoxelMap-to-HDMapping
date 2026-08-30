@@ -11,7 +11,7 @@ It should be located in '~/hdmapping-benchmark/data'.
 ```shell
 mkdir -p ~/hdmapping-benchmark
 cd ~/hdmapping-benchmark
-git clone https://github.com/MapsHD/R-VoxelMap-to-HDMapping --recursive
+git clone https://github.com/marcinmatecki/R-VoxelMap-to-HDMapping --recursive
 cd R-VoxelMap-to-HDMapping
 git checkout Bunker-DVI-Dataset-reg-1
 docker build -t r-voxelmap_noetic .
@@ -27,7 +27,7 @@ cd ~/hdmapping-benchmark/data
 
 ## Step 4 (Open and visualize data)
 Expected data should appear in ~/hdmapping-benchmark/data/output_hdmapping-r-voxelmap
-Use tool [multi_view_tls_registration_step_2](https://github.com/MapsHD/HDMapping) to open session.json from ~/hdmapping-benchmark/data/output_hdmapping-r-voxelmap.
+Use tool [multi_view_tls_registration_step_2](https://github.com/marcinmatecki/HDMapping) to open session.json from ~/hdmapping-benchmark/data/output_hdmapping-r-voxelmap.
 
 You should see following data in folder '~/hdmapping-benchmark/data/output_hdmapping-r-voxelmap'
 
