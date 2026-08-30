@@ -11,7 +11,7 @@ It should be located in '~/hdmapping-benchmark/data'.
 ```shell
 mkdir -p ~/hdmapping-benchmark
 cd ~/hdmapping-benchmark
-git clone https://github.com/marcinmatecki/benchmark-R-VoxelMap-to-HDMapping --recursive
+git clone https://github.com/MapsHD/benchmark-R-VoxelMap-to-HDMapping --recursive
 cd benchmark-R-VoxelMap-to-HDMapping
 git checkout Bunker-DVI-Dataset-reg-1
 docker build -t r-voxelmap_noetic .
