@@ -41,7 +41,7 @@ session.json
 
 trajectory_lio_*.csv
 
-Result(terminated approximately halfway through the sequence due to significant map drift.):
+Result(terminated approximately halfway through the sequence due to significant map drift):
 
 <img width="1428" height="736" alt="Screenshot from 2026-08-30 14-19-21" src="https://github.com/user-attachments/assets/3097200e-0267-4596-9bce-1ed17d1ff1d5" />
 
