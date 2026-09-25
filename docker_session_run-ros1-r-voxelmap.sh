@@ -74,7 +74,7 @@ docker run -it --rm \
     tmux send-keys -t '"$TMUX_SESSION"' '\''sleep 5
 source /opt/ros/noetic/setup.bash
 source /ros_ws/devel/setup.bash
-roslaunch rvoxelmap avia.launch use_sim_time:=true
+roslaunch rvoxelmap livox.launch
 '\'' C-m
 
     # ---------- PANEL 2: rosbag record ----------

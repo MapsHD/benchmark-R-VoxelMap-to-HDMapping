@@ -5,6 +5,13 @@
     <arg name="config_file" default="$(find rvoxelmap)/config/livox.yaml" />
     <arg name="ns" default="rvoxelmap" />
 
+    <!-- Benchmark runs replay a rosbag with the clock option of rosbag play, so
+         the node must take its time from /clock. Without this the odometry messages are
+         stamped with wall-clock time instead of sensor time, and the resulting
+         trajectory shares no timestamps with the ground truth (evo then reports
+         no matching stamps and the benchmark row comes out empty). -->
+    <param name="/use_sim_time" type="bool" value="true" />
+
     <group ns="$(arg ns)">
     <rosparam command="load" file="$(arg config_file)" />
 

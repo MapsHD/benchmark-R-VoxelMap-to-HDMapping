@@ -43,9 +43,16 @@ COPY ./src ./src
 COPY ./patches/config/livox.yaml src/R-VoxelMap/config/livox.yaml
 COPY ./patches/launch/livox.launch src/R-VoxelMap/launch/livox.launch
 
+# R-VoxelMap includes the livox_ros_driver/CustomMsg.h that the
+# livox_ros_driver package in src/ generates. In one parallel catkin_make,
+# R-VoxelMap can compile before that header exists ("fatal error:
+# livox_ros_driver/CustomMsg.h: No such file or directory"), which happens on
+# machines with many cores. Build the driver first, the same way the
+# C3P-VoxelMap benchmark does.
 RUN source /opt/ros/noetic/setup.bash && \
+    catkin_make --pkg livox_ros_driver && \
     catkin_make
-    
+
 ARG UID=1000
 ARG GID=1000
 RUN groupadd -g $GID ros && \
